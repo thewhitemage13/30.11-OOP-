@@ -1,8 +1,81 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
+
+class Cat {
+public:
+	string nick;
+	int age;
+	double weight;
+	int paws;
+	bool angry = false;
+	int clows_lengs;
+	bool is_live = true;
+	bool is_happy = false;
+	bool is_wakeup = true;
+	int energy = 100;
+
+	void Sound()
+	{
+		cout << "Sound meow meow meow" << "\n";
+	}
+	void Play()
+	{
+		cout << "Play with me!" << "\n";
+	}
+	void Eat()
+	{
+		cout << "I want to eat meow" << "\n";
+	}
+	void Pee()
+	{
+		cout << "I have to go to the bathroom" << "\n";
+	}
+	void Attention()
+	{
+		cout << "caress me." << "\n";
+	}
+};
+
+class AirАreshener {
+public:
+	bool is_havepuff = true;
+	bool is_battery = true;
+	string brand;
+	string form;
+	unsigned short number_of_connectors;
+	unsigned short number_of_buttons;
+	string cylinder_type;
+	double working_time;
+
+	void Spritz()
+	{
+		cout << "Pshhh" << "\n";
+	}
+	void Вischarge()
+	{
+		cout << "Hey, I'm out of battery" << "\n";
+	}
+	void Sound()
+	{
+		cout << "I make a sound, so don't be scared at night)))))" << "\n";
+	}
+	void Break()
+	{
+		cout << "I'm sorry, I broke down!" << "\n";
+	}
+	void ExhaustBallon()
+	{
+		cout << "I used the whole bottle with the smell." << "\n";
+	}
+};
 
 class Malika {
 public:
+	int health = 100;
+	int energy = 100;
+	bool is_hungry = true;
+	bool is_angry = false;
+	bool is_happy = true;
 	string surname;
 	string adress;
 	unsigned short age;
@@ -36,41 +109,45 @@ public:
 	{
 		cout << "I hate my teammates!!!!!!!" << "\n";
 	}
-};
 
-class AirАreshener {
-public:
-	string brand;
-	string form;
-	unsigned short number_of_connectors;
-	unsigned short number_of_buttons;
-	string cylinder_type;
-	double working_time;
+	void MalikaTackeHumidiffier(AirАreshener &a)
+	{
+		if (a.is_battery == false)
+		{
+			a.is_battery == true;
+		}
+		if (a.is_havepuff == false)
+		{
+			a.is_havepuff == true;
+		}
+	}
 
-	void Spritz()
+	void PlayWithCaty(Cat& some_cat)
 	{
-		cout << "Pshhh" << "\n";
-	}
-	void Вischarge()
-	{
-		cout << "Hey, I'm out of battery" << "\n";
-	}
-	void Sound()
-	{
-		cout << "I make a sound, so don't be scared at night)))))" << "\n";
-	}
-	void Break()
-	{
-		cout << "I'm sorry, I broke down!" << "\n";
-	}
-	void ExhaustBallon()
-	{
-		cout << "I used the whole bottle with the smell." << "\n";
+		if (some_cat.is_live == false)
+		{
+			cout << "oops..." << "\n";
+			return;
+		}
+		if (some_cat.angry)
+		{
+			health -= 20;
+		}
+		some_cat.is_happy = true;
+		some_cat.weight -= 0.2;
+		some_cat.energy -= 10;
+		if (is_angry == true)
+		{
+			is_angry = false;
+		}
 	}
 };
 
 class Fridge {
 public:
+	bool on = true;
+	bool MalikaHasEat = true;
+	bool take_eat = false;
 	string brand;
 	string color;
 	unsigned short height;
@@ -102,41 +179,31 @@ public:
 	{
 		cout << "If you don't close the freezer tightly, get the mop ready)" << "\n";
 	}
-};
-
-class Cat {
-public: 
-	string name;
-	unsigned short age;
-	string coat_color;
-	unsigned short weight;
-	string breed;
-	unsigned short number_of_paws;
-
-	void Sound()
+	
+	void MalikaHungry(Malika& m)
 	{
-		cout << "Sound meow meow meow" << "\n";
-	}
-	void Play()
-	{
-		cout << "Play with me!" << "\n";
-	}
-	void Eat()
-	{
-		cout << "I want to eat meow" << "\n";
-	}
-	void Pee()
-	{
-		cout << "I have to go to the bathroom" << "\n";
-	}
-	void Attention()
-	{
-		cout << "caress me." << "\n";
+		
+		if (m.is_hungry == false)
+		{
+			return;
+		}
+		if (MalikaHasEat == false and m.is_angry == false)
+		{
+			m.is_angry == true;
+		}
+		if (m.is_hungry == true)
+		{
+			cout << "Hmm, I'm so hungry. What do I have in the fridge?" << "\n";
+			take_eat == true;
+		}
 	}
 };
 
 class Grill {
 public:
+	bool on = true;
+	bool maxenergy = true;
+	bool is_dirty = false;
 	string brand;
 	unsigned short max_temperature;
 	unsigned short min_temperature;
@@ -165,8 +232,52 @@ public:
 	{
 		cout << "if you don't watch the food, it'll burn." << "\n";
 	}
+
+	void MalikaСooks(Fridge& f, Malika& m)
+	{
+		if (f.take_eat == false)
+		{
+			cout << "I think we should start by taking food out of the fridge" << "\n";
+			return;
+		}
+		if (f.take_eat == true)
+		{
+			cout << "I'm gonna use the grill to cook tonight" << "\n";
+			is_dirty == true;
+			m.is_hungry == false;
+			m.weight += 0.2;
+		}
+		if (m.energy < 100)
+		{
+			m.energy += 5;
+		}
+		if (m.is_angry == true)
+		{
+			m.is_angry == false;
+		}
+	}
+
+	void ErrorVT(Fridge& f)
+	{
+		if (f.on == true and on == true and maxenergy == true)
+		{
+			cout << "The grill is on maximum. overvoltage. Reduce the power!!!!!!" << "\n";
+			f.on == false;
+		}
+	}
 };
 
 int main()
 {
+	Malika m;
+	AirАreshener a;
+	Fridge f;
+	Cat c;
+	Grill g;
+
+	f.MalikaHungry(m);
+	g.MalikaСooks(f, m);
+	m.PlayWithCaty(c);
+	g.ErrorVT(f);
+	m.MalikaTackeHumidiffier(a);
 }
