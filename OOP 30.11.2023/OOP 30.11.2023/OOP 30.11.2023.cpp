@@ -2,7 +2,7 @@
 using namespace std;
 
 class Cat {
-public:
+private:
 	string nick;
 	int age;
 	double weight;
@@ -13,6 +13,8 @@ public:
 	bool is_happy = false;
 	bool is_wakeup = true;
 	int energy = 100;
+
+public:
 
 	void Sound()
 	{
@@ -34,10 +36,66 @@ public:
 	{
 		cout << "caress me." << "\n";
 	}
+	void SetAngry(bool a)
+	{
+		angry = a;
+	}
+	bool GetAngry()
+	{
+		return angry;
+	}
+	void SetLive(bool l)
+	{
+		is_live = l;
+	}
+	bool GetLive()
+	{
+		return is_live;
+	}
+	void SetHappy(bool h)
+	{
+		is_happy = h;
+	}
+	bool GetHealth()
+	{
+		return is_happy;
+	}
+	void SetWakeUp(bool w)
+	{
+		is_wakeup = w;
+	}
+	bool GetWakeUp()
+	{
+		return is_wakeup;
+	}
+	void AddWeight(double mg)
+	{
+		weight += mg;
+	}
+	void SetWeight(double wg)
+	{
+		weight = wg;
+	}
+	double GetWeight()
+	{
+		return weight;
+	}
+	void AddEnergy(int e)
+	{
+		energy += e;
+	}
+	void SetEnergy(int e)
+	{
+		energy = e;
+	}
+	int GetEnergy()
+	{
+		return energy;
+	}
 };
 
 class AirАreshener {
-public:
+private:
 	bool is_havepuff = true;
 	bool is_battery = true;
 	string brand;
@@ -46,7 +104,7 @@ public:
 	unsigned short number_of_buttons;
 	string cylinder_type;
 	double working_time;
-
+public:
 	void Spritz()
 	{
 		cout << "Pshhh" << "\n";
@@ -67,10 +125,27 @@ public:
 	{
 		cout << "I used the whole bottle with the smell." << "\n";
 	}
+	void SetBattery(bool b)
+	{
+		is_battery = b;
+	}
+	bool GetBattery()
+	{
+		return is_battery;
+	}
+	void SetPuff(bool p)
+	{
+		is_havepuff = p;
+	}
+	bool GetPuff()
+	{
+		return is_havepuff;
+	}
+
 };
 
 class Malika {
-public:
+private:
 	int health = 100;
 	int energy = 100;
 	bool is_hungry = true;
@@ -89,9 +164,10 @@ public:
 	unsigned short number_of_teeth;
 	unsigned short leg_size;
 
+public:
 	void Sleep()
 	{
-		cout << "Zzzz..."<<"\n";
+		cout << "Zzzz..." << "\n";
 	}
 	void Eat()
 	{
@@ -99,7 +175,7 @@ public:
 	}
 	void Speak()
 	{
-		cout << "Bla bla bla..."<<"\n";
+		cout << "Bla bla bla..." << "\n";
 	}
 	void Read()
 	{
@@ -109,42 +185,93 @@ public:
 	{
 		cout << "I hate my teammates!!!!!!!" << "\n";
 	}
-
-	void MalikaTackeHumidiffier(AirАreshener &a)
+	void SetEnergy(int en)
 	{
-		if (a.is_battery == false)
+		energy = en;
+	}
+	int GetEnergy()
+	{
+		return energy;
+	}
+	void AddEnergy(int en)
+	{
+		energy += en;
+	}
+	void AddHealth(int h)
+	{
+		health += h;
+	}
+	void SetHealth(int h)
+	{
+		health = h;
+	}
+	int GetHeakth()
+	{
+		return health;
+	}
+	void SetWeight(unsigned int w)
+	{
+		weight = w;
+	}
+	unsigned int GetWeight()
+	{
+		return weight;
+	}
+	void AddWeight(double w)
+	{
+		weight += w;
+	}
+	void SetHungry(bool h)
+	{
+		is_hungry = h;
+	}
+	bool GetHungry()
+	{
+		return is_hungry;
+	}
+	void SetAngry(bool an)
+	{
+		is_angry = an;
+	}
+	bool GetAngry()
+	{
+		return is_angry;
+	}
+	void MalikaTackeHumidiffier(AirАreshener& a)
+	{
+		if (a.GetBattery() == false)
 		{
-			a.is_battery == true;
+			a.SetBattery(true);
 		}
-		if (a.is_havepuff == false)
+		if (a.GetPuff() == false)
 		{
-			a.is_havepuff == true;
+			a.SetPuff(true);
 		}
 	}
-
 	void PlayWithCaty(Cat& some_cat)
 	{
-		if (some_cat.is_live == false)
+		if (some_cat.GetLive() == false)
 		{
 			cout << "oops..." << "\n";
 			return;
 		}
-		if (some_cat.angry)
+		if (some_cat.GetAngry())
 		{
-			health -= 20;
+			AddHealth(-20);
 		}
-		some_cat.is_happy = true;
-		some_cat.weight -= 0.2;
-		some_cat.energy -= 10;
-		if (is_angry == true)
+
+		some_cat.SetHappy(true);
+		some_cat.AddWeight(-0.2);
+		some_cat.AddEnergy(-10);
+		if (GetAngry() == true)
 		{
-			is_angry = false;
+			SetAngry(false);
 		}
 	}
 };
 
 class Fridge {
-public:
+private:
 	bool on = true;
 	bool MalikaHasEat = true;
 	bool take_eat = false;
@@ -158,6 +285,8 @@ public:
 	unsigned short minimum_temperature;
 	string connection_method;
 	bool light;
+
+public:
 
 	void StoreFood()
 	{
@@ -179,28 +308,52 @@ public:
 	{
 		cout << "If you don't close the freezer tightly, get the mop ready)" << "\n";
 	}
-	
+	void SetOn(bool o)
+	{
+		on = o;
+	}
+	bool GetOn()
+	{
+		return on;
+	}
+	void SetTakeEat(bool te)
+	{
+		take_eat = te;
+	}
+	bool GetTakeEat()
+	{
+		return take_eat;
+	}
+
+	void SetMalikaHasEat(bool mh)
+	{
+		MalikaHasEat = mh;
+	}
+	bool GetMalikaHasEat()
+	{
+		return MalikaHasEat;
+	}
+
 	void MalikaHungry(Malika& m)
 	{
-		
-		if (m.is_hungry == false)
+		if (m.GetHungry() == false)
 		{
 			return;
 		}
-		if (MalikaHasEat == false and m.is_angry == false)
+		if (MalikaHasEat == false and m.GetHungry() == false)
 		{
-			m.is_angry == true;
+			m.SetAngry(true);
 		}
-		if (m.is_hungry == true)
+		if (m.GetHungry() == true)
 		{
 			cout << "Hmm, I'm so hungry. What do I have in the fridge?" << "\n";
-			take_eat == true;
+			SetTakeEat(true);
 		}
 	}
 };
 
 class Grill {
-public:
+private:
 	bool on = true;
 	bool maxenergy = true;
 	bool is_dirty = false;
@@ -211,6 +364,9 @@ public:
 	unsigned short width;
 	unsigned short number_of_buttons;
 	string connection_method;
+
+public:
+
 
 	void Cook()
 	{
@@ -232,37 +388,51 @@ public:
 	{
 		cout << "if you don't watch the food, it'll burn." << "\n";
 	}
-
+	void SetOn(bool o)
+	{
+		on = o;
+	}
+	bool GetOn()
+	{
+		return on;
+	}
+	void SetMaxEnergy(bool me)
+	{
+		maxenergy = me;
+	}
+	bool GetEnergy()
+	{
+		return maxenergy;
+    }
 	void MalikaСooks(Fridge& f, Malika& m)
 	{
-		if (f.take_eat == false)
+		if (f.GetTakeEat() == false)
 		{
 			cout << "I think we should start by taking food out of the fridge" << "\n";
 			return;
 		}
-		if (f.take_eat == true)
+		if (f.GetTakeEat() == true)
 		{
 			cout << "I'm gonna use the grill to cook tonight" << "\n";
-			is_dirty == true;
-			m.is_hungry == false;
-			m.weight += 0.2;
+			is_dirty = true;
+			m.SetHungry(false);
+			m.AddWeight(+0.2);
 		}
-		if (m.energy < 100)
+		if (m.GetEnergy() < 100)
 		{
-			m.energy += 5;
+			m.AddEnergy(+5);
 		}
-		if (m.is_angry == true)
+		if (m.GetAngry() == true)
 		{
-			m.is_angry == false;
+			m.SetAngry(false);
 		}
 	}
-
 	void ErrorVT(Fridge& f)
 	{
-		if (f.on == true and on == true and maxenergy == true)
+		if (f.GetOn() == true and GetOn() == true and GetEnergy() == true)
 		{
 			cout << "The grill is on maximum. overvoltage. Reduce the power!!!!!!" << "\n";
-			f.on == false;
+			f.SetOn(false);
 		}
 	}
 };
