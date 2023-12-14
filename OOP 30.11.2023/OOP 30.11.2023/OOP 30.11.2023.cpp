@@ -36,59 +36,59 @@ public:
 	{
 		cout << "caress me." << "\n";
 	}
-	void SetAngry(bool a)
+	void SetAngry(bool angry)
 	{
-		angry = a;
+		this->angry = angry;
 	}
-	bool GetAngry()
+	bool GetAngry() const
 	{
 		return angry;
 	}
-	void SetLive(bool l)
+	void SetLive(bool is_live)
 	{
-		is_live = l;
+		this->is_live = is_live;
 	}
-	bool GetLive()
+	bool GetLive() const
 	{
 		return is_live;
 	}
-	void SetHappy(bool h)
+	void SetHappy(bool is_happy)
 	{
-		is_happy = h;
+		this->is_happy = is_happy;
 	}
-	bool GetHealth()
+	bool GetHealth() const
 	{
 		return is_happy;
 	}
-	void SetWakeUp(bool w)
+	void SetWakeUp(bool is_wakeup)
 	{
-		is_wakeup = w;
+		this->is_wakeup = is_wakeup;
 	}
-	bool GetWakeUp()
+	bool GetWakeUp() const
 	{
 		return is_wakeup;
 	}
-	void AddWeight(double mg)
+	void AddWeight(double weight)
 	{
-		weight += mg;
+		this->weight += weight;
 	}
-	void SetWeight(double wg)
+	void SetWeight(double weight)
 	{
-		weight = wg;
+		this->weight = weight;
 	}
-	double GetWeight()
+	double GetWeight() const
 	{
 		return weight;
 	}
-	void AddEnergy(int e)
+	void AddEnergy(int energy)
 	{
-		energy += e;
+		this->energy += energy;
 	}
-	void SetEnergy(int e)
+	void SetEnergy(int energy)
 	{
-		energy = e;
+		this->energy = energy;
 	}
-	int GetEnergy()
+	int GetEnergy() const
 	{
 		return energy;
 	}
@@ -125,19 +125,19 @@ public:
 	{
 		cout << "I used the whole bottle with the smell." << "\n";
 	}
-	void SetBattery(bool b)
+	void SetBattery(bool is_battery)
 	{
-		is_battery = b;
+		this->is_battery = is_battery;
 	}
-	bool GetBattery()
+	bool GetBattery() const
 	{
 		return is_battery;
 	}
-	void SetPuff(bool p)
+	void SetPuff(bool is_havepuff)
 	{
-		is_havepuff = p;
+		this->is_havepuff = is_havepuff;
 	}
-	bool GetPuff()
+	bool GetPuff() const
 	{
 		return is_havepuff;
 	}
@@ -185,55 +185,55 @@ public:
 	{
 		cout << "I hate my teammates!!!!!!!" << "\n";
 	}
-	void SetEnergy(int en)
+	void SetEnergy(int energy)
 	{
-		energy = en;
+		this->energy = energy;
 	}
-	int GetEnergy()
+	int GetEnergy() const
 	{
 		return energy;
 	}
-	void AddEnergy(int en)
+	void AddEnergy(int energy)
 	{
-		energy += en;
+		this->energy += energy;
 	}
-	void AddHealth(int h)
+	void AddHealth(int health)
 	{
-		health += h;
+		this->health += health;
 	}
-	void SetHealth(int h)
+	void SetHealth(int health)
 	{
-		health = h;
+		this->health = health;
 	}
-	int GetHeakth()
+	int GetHeakth() const
 	{
 		return health;
 	}
-	void SetWeight(unsigned int w)
+	void SetWeight(unsigned int weight)
 	{
-		weight = w;
+		this->weight = weight;
 	}
-	unsigned int GetWeight()
+	unsigned int GetWeight() const
 	{
 		return weight;
 	}
-	void AddWeight(double w)
+	void AddWeight(double weight)
 	{
-		weight += w;
+		this->weight += weight;
 	}
-	void SetHungry(bool h)
+	void SetHungry(bool is_hungry)
 	{
-		is_hungry = h;
+		this->is_hungry = is_hungry;
 	}
-	bool GetHungry()
+	bool GetHungry() const
 	{
 		return is_hungry;
 	}
-	void SetAngry(bool an)
+	void SetAngry(bool is_angry)
 	{
-		is_angry = an;
+		this->is_angry = is_angry;
 	}
-	bool GetAngry()
+	bool GetAngry() const
 	{
 		return is_angry;
 	}
@@ -308,28 +308,28 @@ public:
 	{
 		cout << "If you don't close the freezer tightly, get the mop ready)" << "\n";
 	}
-	void SetOn(bool o)
+	void SetOn(bool on)
 	{
-		on = o;
+		this->on = on;
 	}
-	bool GetOn()
+	bool GetOn() const
 	{
 		return on;
 	}
-	void SetTakeEat(bool te)
+	void SetTakeEat(bool take_eat)
 	{
-		take_eat = te;
+		this->take_eat = take_eat;
 	}
-	bool GetTakeEat()
+	bool GetTakeEat() const
 	{
 		return take_eat;
 	}
 
-	void SetMalikaHasEat(bool mh)
+	void SetMalikaHasEat(bool MalikaHasEat)
 	{
-		MalikaHasEat = mh;
+		this->MalikaHasEat = MalikaHasEat;
 	}
-	bool GetMalikaHasEat()
+	bool GetMalikaHasEat() const
 	{
 		return MalikaHasEat;
 	}
@@ -388,19 +388,19 @@ public:
 	{
 		cout << "if you don't watch the food, it'll burn." << "\n";
 	}
-	void SetOn(bool o)
+	void SetOn(bool on)
 	{
-		on = o;
+		this->on = on;
 	}
-	bool GetOn()
+	bool GetOn() const
 	{
 		return on;
 	}
-	void SetMaxEnergy(bool me)
+	void SetMaxEnergy(bool maxenergy)
 	{
-		maxenergy = me;
+		this->maxenergy = maxenergy;
 	}
-	bool GetEnergy()
+	bool GetEnergy() const
 	{
 		return maxenergy;
     }
