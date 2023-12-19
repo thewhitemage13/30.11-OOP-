@@ -494,6 +494,13 @@ int main()
 	Fridge f;
 	Cat c;
 	Grill g;
+
+	Malika ma(true,55);
+	AirАreshener aa(true,false);
+	Fridge fr(true,false);
+	Cat ca(true, false, 5.67);
+	Grill gr(true,false);
+
 	f.MalikaHungry(m);
 	g.MalikaСooks(f, m);
 	m.PlayWithCaty(c);
