@@ -16,6 +16,19 @@ private:
 
 public:
 
+	Cat()
+	{
+		SetAngry(true);
+		SetHappy(false);
+		SetWeight(5.67);
+	}
+	Cat(bool angry,bool is_happy,double weight)
+	{
+		SetAngry(angry);
+		SetHappy(is_happy);
+		SetWeight(weight);
+	}
+
 	void Sound()
 	{
 		cout << "Sound meow meow meow" << "\n";
@@ -105,6 +118,16 @@ private:
 	string cylinder_type;
 	double working_time;
 public:
+	AirАreshener()
+	{
+		SetPuff(true);
+		SetBattery(false);
+	}
+	AirАreshener(bool is_havepuff, bool is_battery)
+	{
+		SetPuff(is_havepuff);
+		SetBattery(is_battery);
+	}
 	void Spritz()
 	{
 		cout << "Pshhh" << "\n";
@@ -165,6 +188,16 @@ private:
 	unsigned short leg_size;
 
 public:
+	Malika()
+	{
+		SetHungry(true);
+		SetWeight(55);
+	}
+	Malika(bool is_hungry, int weight)
+	{
+		SetHungry(is_hungry);
+		SetWeight(weight);
+	}
 	void Sleep()
 	{
 		cout << "Zzzz..." << "\n";
@@ -287,7 +320,16 @@ private:
 	bool light;
 
 public:
-
+	Fridge()
+	{
+		SetOn(true);
+		SetTakeEat(false);
+	}
+	Fridge(bool on, bool take_eat)
+	{
+		SetOn(on);
+		SetTakeEat(take_eat);
+	}
 	void StoreFood()
 	{
 		cout << "I can store food" << "\n";
@@ -366,8 +408,16 @@ private:
 	string connection_method;
 
 public:
-
-
+	Grill()
+	{
+		SetOn(true);
+		SetMaxEnergy(false);
+	}
+	Grill(bool on, bool maxenergy)
+	{
+		SetOn(on);
+		SetMaxEnergy(maxenergy);
+	}
 	void Cook()
 	{
 		cout << "I can cook a meal" << "\n";
@@ -444,7 +494,6 @@ int main()
 	Fridge f;
 	Cat c;
 	Grill g;
-
 	f.MalikaHungry(m);
 	g.MalikaСooks(f, m);
 	m.PlayWithCaty(c);
