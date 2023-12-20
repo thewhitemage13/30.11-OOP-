@@ -888,10 +888,10 @@ int main()
 	Cat c;
 	Grill g;
 
-	Cat ca(true,false,4,60,true,4,1,"Petya",true);
+	Cat ca(true ,false ,4 ,60 ,true ,4 ,1 ,"Petya" ,true);
 	AirАreshener ai(true, true, "Samsung", "Column", 2, 2, "Electro", 345);
-	Malika ma (true,54,100,50,true,false,"Blala","Nekrasova 5",17,"blue","red",2,2,10,10,32,36);
-	Fridge fr (false,false,false,"Bosch","Dark",200,120,2,150,20,1,false);
+	Malika ma (true, 54, 100, 50 ,true ,false ,"Blala" ,"Nekrasova 5" ,17 ,"blue" ,"red" ,2 ,2 ,10 ,10 ,32 ,36);
+	Fridge fr (false, false, false, "Bosch" ,"Dark" ,200 ,120 ,2 ,150 ,20 , 1 ,false);
 	Grill gr(true, false, false, "Tefal", 180, 30, 5);
 
 	f.MalikaHungry(m);
