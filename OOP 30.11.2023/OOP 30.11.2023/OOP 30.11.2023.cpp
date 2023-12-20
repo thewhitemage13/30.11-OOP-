@@ -7,12 +7,11 @@ private:
 	int age;
 	double weight;
 	int paws;
-	bool angry = false;
-	int clows_lengs;
-	bool is_live = true;
-	bool is_happy = false;
-	bool is_wakeup = true;
-	int energy = 100;
+	bool angry;
+	bool is_live;
+	bool is_happy;
+	bool is_wakeup;
+	int energy;
 
 public:
 
@@ -21,14 +20,26 @@ public:
 		SetAngry(true);
 		SetHappy(false);
 		SetWeight(5.67);
+		SetEnergy(100);
+		SetWakeUp(true);
+		SetPaws(4);
+		SetAge(2);
+		SetNick("Vasya");
+		SetLive(true);
 	}
-	Cat(bool angry,bool is_happy,double weight)
+	Cat(bool angry, bool is_happy, double weight, int energy, double is_wakeup, int paws, int age, string nick, bool is_live)
 	{
 		SetAngry(angry);
 		SetHappy(is_happy);
 		SetWeight(weight);
+		SetEnergy(energy);
+		SetWakeUp(is_wakeup);
+		SetPaws(paws);
+		SetAge(age);
+		SetNick(nick);
+		SetLive(is_live);
 	}
-
+	
 	void Sound()
 	{
 		cout << "Sound meow meow meow" << "\n";
@@ -105,12 +116,36 @@ public:
 	{
 		return energy;
 	}
+	void SetNick(string nick)
+	{
+		this->nick = nick;
+	}
+	string GetName() const
+	{
+		return nick;
+	}
+	void SetAge(int age)
+	{
+		this->age = age;
+	}
+	int GetAge() const
+	{
+		return age;
+	}
+	void SetPaws(int paws)
+	{
+		this->paws = paws;
+	}
+	int GetPaws() const
+	{
+		return paws;
+	}
 };
 
 class AirАreshener {
 private:
-	bool is_havepuff = true;
-	bool is_battery = true;
+	bool is_havepuff;
+	bool is_battery;
 	string brand;
 	string form;
 	unsigned short number_of_connectors;
@@ -118,15 +153,28 @@ private:
 	string cylinder_type;
 	double working_time;
 public:
+
 	AirАreshener()
 	{
+		SetBrand("Samsung");
 		SetPuff(true);
 		SetBattery(false);
+		SetForm("Col");
+		SetNumberConnectors(2);
+		SetNumberButtons(2);
+		SetType("Electro");
+		SetWorkTime(129);
 	}
-	AirАreshener(bool is_havepuff, bool is_battery)
+	AirАreshener(bool is_havepuff, bool is_battery, string brand, string form, unsigned short number_of_connectors, unsigned short number_of_buttons, string cylinder_type, double working_time)
 	{
 		SetPuff(is_havepuff);
 		SetBattery(is_battery);
+		SetBrand(brand);
+		SetForm(form);
+		SetNumberConnectors(number_of_connectors);
+		SetNumberButtons(number_of_buttons);
+		SetType(cylinder_type);
+		SetWorkTime(working_time);
 	}
 	void Spritz()
 	{
@@ -164,40 +212,119 @@ public:
 	{
 		return is_havepuff;
 	}
+	void SetWorkTime(double working_time)
+	{
+		this->working_time = working_time;
+	}
+	double GetWorkTime() const
+	{
+		return working_time;
+	}
+	void SetType(string cylinder_type)
+	{
+		this->cylinder_type = cylinder_type;
+	}
+	string GetType(string cylinder_type) const
+	{
+		return cylinder_type;
+	}
+	void SetNumberButtons(unsigned short number_of_buttons)
+	{
+		this->number_of_buttons = number_of_buttons;
+	}
+	unsigned short GetNumberButtons() const
+	{
+		return number_of_buttons;
+	}
+	void SetNumberConnectors(unsigned short number_of_connectors)
+	{
+		this->number_of_connectors = number_of_connectors;
+	}
+	unsigned short GetNumberConnectors() const
+	{
+		return number_of_connectors;
+	}
 
+	void SetForm(string form)
+	{
+		this->form = form;
+	}
+	string GetForm() const
+	{
+		return form;
+	}
+	void SetBrand(string brand)
+	{
+		this->brand = brand;
+	}
+	string GetBrand() const
+	{
+		return brand;
+	}
 };
 
 class Malika {
-private:
-	int health = 100;
-	int energy = 100;
-	bool is_hungry = true;
-	bool is_angry = false;
-	bool is_happy = true;
-	string surname;
-	string adress;
-	unsigned short age;
-	unsigned short weight;
-	string hair_color;
-	string eye_color;
-	unsigned short sleight_of_hand;
-	unsigned short number_of_legs;
-	unsigned short number_of_fingers;
-	unsigned short number_of_toes;
-	unsigned short number_of_teeth;
-	unsigned short leg_size;
+private: 
+	int health;//
+	int energy;//
+	bool is_hungry;//
+	bool is_angry;//
+	bool is_happy;//
+	string surname;//
+	string adress;//
+	unsigned short age;//
+	unsigned short weight;//
+	string hair_color;//
+	string eye_color;//
+	unsigned short sleight_of_hand;//
+	unsigned short number_of_legs;//
+	unsigned short number_of_fingers;//
+	unsigned short number_of_toes;//
+	unsigned short number_of_teeth;//
+	unsigned short leg_size;//
 
 public:
 	Malika()
 	{
 		SetHungry(true);
 		SetWeight(55);
+		SetHealth(100);
+		SetEnergy(100);
+		SetAngry(false);
+		SetHappy(true);
+		SetSurname("Benoeva");
+		SetAdress("Yakira 17");
+		SetAge(18);
+		SetHairColor("Dark");
+		SetEye("Dark");
+		SetSleightHand(2);
+		SetNumberLegs(2);
+		SetNumberFingers(10);
+		SetNumberToes(10);
+		SetTeeth(32);
+		SetLegSize(37);
 	}
-	Malika(bool is_hungry, int weight)
+	Malika(bool is_hungry, int weight, int health, int enegry, bool is_angry, bool is_happy, string surname, string adress, int age, string hair_color, string eye_color, unsigned short sleight_of_hand, unsigned short number_of_legs, unsigned short number_of_fingers, unsigned short number_of_toes, unsigned short number_of_teeth, unsigned short leg_size)
 	{
 		SetHungry(is_hungry);
 		SetWeight(weight);
+		SetHealth(health);
+		SetEnergy(energy);
+		SetAngry(is_angry);
+		SetHappy(is_happy);
+		SetSurname(surname);
+		SetAdress(adress);
+		SetAge(age);
+		SetHairColor(hair_color);
+		SetEye(eye_color);
+		SetSleightHand(sleight_of_hand);
+		SetNumberLegs(number_of_legs);
+		SetNumberFingers(number_of_fingers);
+		SetNumberToes(number_of_toes);
+		SetTeeth(number_of_teeth);
+		SetLegSize(leg_size);
 	}
+	
 	void Sleep()
 	{
 		cout << "Zzzz..." << "\n";
@@ -270,6 +397,115 @@ public:
 	{
 		return is_angry;
 	}
+
+	void SetLegSize(unsigned short leg_size)
+	{
+		this->leg_size = leg_size;
+	}
+	unsigned short GetLegSize() const
+	{
+		return leg_size;
+	}
+
+	void SetTeeth(unsigned short number_of_teeth)
+	{
+		this->number_of_teeth = number_of_teeth;
+	}
+	unsigned short GetTeeth() const
+	{
+		return number_of_teeth;
+	}
+
+	void SetNumberToes(unsigned short number_of_toes)
+	{
+		this->number_of_toes = number_of_toes;
+	}
+	unsigned short SetNumberToes() const
+	{
+		return number_of_toes;
+	}
+
+	void SetNumberFingers(unsigned short number_of_fingers)
+	{
+		this->number_of_fingers = number_of_fingers;
+	}
+	unsigned short GetNumberFingers() const
+	{
+		return number_of_fingers;
+	}
+
+	void SetNumberLegs(unsigned short number_of_legs)
+	{
+		this->number_of_legs = number_of_legs;
+	}
+	unsigned short GetNumberLegs() const
+	{
+		return number_of_legs;
+	}
+
+	void SetSleightHand(unsigned short sleight_of_hand)
+	{
+		this->sleight_of_hand = sleight_of_hand;
+	}
+	unsigned short GetSleightHand() const
+	{
+		return sleight_of_hand;
+	}
+
+	void SetEye(string eye_color)
+	{
+		this->eye_color = eye_color;
+	}
+	string GetEye() const
+	{
+		return eye_color;
+	}
+
+	void SetHairColor(string hair_color)
+	{
+		this->hair_color = hair_color;
+	}
+	string GetHairColor() const
+	{
+		return hair_color;
+	}
+
+	void SetAge(unsigned short age)
+	{
+		this->age = age;
+	}
+	int GetAge() const
+	{
+		return age;
+	}
+
+	void SetAdress(string adress)
+	{
+		this->adress = adress;
+	}
+	string GetAdress() const
+	{
+		return adress;
+	}
+
+	void SetSurname(string surname)
+	{
+		this->surname = surname;
+	}
+	string GetSurname() const
+	{
+		return surname;
+	}
+
+	void SetHappy(bool is_happy)
+	{
+		this->is_happy = is_happy;
+	}
+	bool GetHappy() const
+	{
+		return is_happy;
+	}
+
 	void MalikaTackeHumidiffier(AirАreshener& a)
 	{
 		if (a.GetBattery() == false)
@@ -305,9 +541,9 @@ public:
 
 class Fridge {
 private:
-	bool on = true;
-	bool MalikaHasEat = true;
-	bool take_eat = false;
+	bool on;
+	bool MalikaHasEat;
+	bool take_eat;
 	string brand;
 	string color;
 	unsigned short height;
@@ -315,8 +551,7 @@ private:
 	unsigned short number_of_compartments;
 	unsigned short volume_in_liters;
 	unsigned short maximum_temperature;
-	unsigned short minimum_temperature;
-	string connection_method;
+    unsigned short minimum_temperature;
 	bool light;
 
 public:
@@ -324,12 +559,34 @@ public:
 	{
 		SetOn(true);
 		SetTakeEat(false);
+		SetMalikaHasEat(true);
+		SetBrand("Samsung");
+		SetColor("Blue");
+		SetHeight(195);
+		SetWidth(100);
+		SetCompartments(4);
+		SetLiter(250);
+		SetMaxTemp(15);
+		SetMinimum(2);
+		SetLight(true);
 	}
-	Fridge(bool on, bool take_eat)
+
+	Fridge(bool on, bool take_eat, bool MalikaHasEat,string brand, string color, unsigned short height, unsigned short width, unsigned short number_of_compartments, unsigned short volume_in_liters, unsigned short maximum_temperature, unsigned short minimum_temperature, bool light)
 	{
 		SetOn(on);
 		SetTakeEat(take_eat);
+		SetMalikaHasEat(MalikaHasEat);
+		SetBrand(brand);
+		SetColor(color);
+		SetHeight(height);
+		SetWidth(width);
+		SetCompartments(number_of_compartments);
+		SetLiter(volume_in_liters);
+		SetMaxTemp(maximum_temperature);
+		SetMinimum(minimum_temperature);
+		SetLight(light);
 	}
+
 	void StoreFood()
 	{
 		cout << "I can store food" << "\n";
@@ -376,6 +633,88 @@ public:
 		return MalikaHasEat;
 	}
 
+	void SetLight(bool light)
+	{
+		this->light = light;
+	}
+	bool GetLight() const
+	{
+		return light;
+	}
+
+	void SetMinimum(unsigned short minimum_temperature)
+	{
+		this->minimum_temperature = minimum_temperature;
+	}
+
+	unsigned short GetMinimum() const
+	{
+		return minimum_temperature;
+	}
+
+	void SetMaxTemp(unsigned short maximum_temperature)
+	{
+		this->maximum_temperature = maximum_temperature;
+	}
+	unsigned short GetMaxTemp() const
+	{
+		return maximum_temperature;
+	}
+
+	void SetLiter(unsigned short volume_in_liters)
+	{
+		this->volume_in_liters = volume_in_liters;
+	}
+	unsigned short GetLiter() const
+	{
+		return volume_in_liters;
+	}
+
+	void SetCompartments(unsigned short number_of_compartments)
+	{
+		this->number_of_compartments = number_of_compartments;
+	}
+	unsigned short SetCompartments() const
+	{
+		return number_of_compartments;
+	}
+
+	void SetWidth(unsigned short width)
+	{
+		this->width = width;
+	}
+	unsigned short SetWidth() const
+	{
+		return width;
+	}
+
+	void SetHeight(unsigned short height)
+	{
+		this->height = height;
+	}
+	unsigned short SetHeight() const
+	{
+		return height;
+	}
+
+	void SetColor(string color)
+	{
+		this->color = color;
+	}
+	string GetColor() const
+	{
+		return color;
+	}
+
+	void SetBrand(string brand)
+	{
+		this->brand = brand;
+	}
+	string GetBrand() const
+	{
+		return brand;
+	}
+
 	void MalikaHungry(Malika& m)
 	{
 		if (m.GetHungry() == false)
@@ -402,22 +741,30 @@ private:
 	string brand;
 	unsigned short max_temperature;
 	unsigned short min_temperature;
-	unsigned short height;
-	unsigned short width;
 	unsigned short number_of_buttons;
-	string connection_method;
 
 public:
 	Grill()
 	{
 		SetOn(true);
 		SetMaxEnergy(false);
+		SetDirty(false);
+		SetBrand("Samsung");
+		SetMax(230);
+		SetMin(25);
+		SetButtons(15);
 	}
-	Grill(bool on, bool maxenergy)
+	Grill(bool on, bool maxenergy, bool is_dirty, string brand, unsigned short max_temperature, unsigned short min_temperature, unsigned short number_of_buttons)
 	{
 		SetOn(on);
 		SetMaxEnergy(maxenergy);
+		SetDirty(is_dirty);
+		SetBrand(brand);
+		SetMax(max_temperature);
+		SetMin(min_temperature);
+		SetButtons(number_of_buttons);
 	}
+
 	void Cook()
 	{
 		cout << "I can cook a meal" << "\n";
@@ -454,6 +801,52 @@ public:
 	{
 		return maxenergy;
     }
+
+	void SetButtons(unsigned short number_of_buttons)
+	{
+		this->number_of_buttons = number_of_buttons;
+	}
+	unsigned short GetButtons() const
+	{
+		return number_of_buttons;
+	}
+
+	void SetMin(unsigned short min_temperature)
+	{
+		this->min_temperature = min_temperature;
+	}
+	unsigned short GetMin() const
+	{
+		return min_temperature;
+	}
+
+	void SetMax(unsigned short max_temperature)
+	{
+		this->max_temperature = max_temperature;
+	}
+	unsigned short GetMax() const
+	{
+		return max_temperature;
+	}
+
+	void SetBrand(string brand)
+	{
+		this->brand = brand;
+	}
+	string GetBrand() const
+	{
+		return brand;
+	}
+
+	void SetDirty(bool is_dirty)
+	{
+		this->is_dirty = is_dirty;
+	}
+	bool GetDirty() const
+	{
+		return is_dirty;
+	}
+
 	void MalikaСooks(Fridge& f, Malika& m)
 	{
 		if (f.GetTakeEat() == false)
@@ -494,12 +887,6 @@ int main()
 	Fridge f;
 	Cat c;
 	Grill g;
-
-	Malika ma(true,55);
-	AirАreshener aa(true,false);
-	Fridge fr(true,false);
-	Cat ca(true, false, 5.67);
-	Grill gr(true,false);
 
 	f.MalikaHungry(m);
 	g.MalikaСooks(f, m);
