@@ -265,23 +265,23 @@ public:
 
 class Malika {
 private: 
-	int health;//
-	int energy;//
-	bool is_hungry;//
-	bool is_angry;//
-	bool is_happy;//
-	string surname;//
-	string adress;//
-	unsigned short age;//
-	unsigned short weight;//
-	string hair_color;//
-	string eye_color;//
-	unsigned short sleight_of_hand;//
-	unsigned short number_of_legs;//
-	unsigned short number_of_fingers;//
-	unsigned short number_of_toes;//
-	unsigned short number_of_teeth;//
-	unsigned short leg_size;//
+	int health;
+	int energy;
+	bool is_hungry;
+	bool is_angry;
+	bool is_happy;
+	string surname;
+	string adress;
+	unsigned short age;
+	unsigned short weight;
+	string hair_color;
+	string eye_color;
+	unsigned short sleight_of_hand;
+	unsigned short number_of_legs;
+	unsigned short number_of_fingers;
+	unsigned short number_of_toes;
+	unsigned short number_of_teeth;
+	unsigned short leg_size;
 
 public:
 	Malika()
@@ -887,6 +887,12 @@ int main()
 	Fridge f;
 	Cat c;
 	Grill g;
+
+	Cat ca(true,false,4,60,true,4,1,"Petya",true);
+	AirАreshener ai(true, true, "Samsung", "Column", 2, 2, "Electro", 345);
+	Malika(true,54,100,50,true,false,"Blala","Nekrasova 5",17,"blue","red",2,2,10,10,32,36);
+	Fridge(false,false,false,"Bosch","Dark",200,120,2,150,20,1,false);
+	Grill(true, false, false, "Tefal", 180, 30, 5);
 
 	f.MalikaHungry(m);
 	g.MalikaСooks(f, m);
